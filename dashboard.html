@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Người Chơi</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Chào mừng, <span id="usernameDisplay"></span></h2>
+        <div class="player-info">
+            <p><strong>Tên người chơi:</strong> <span id="playerName">N/A</span></p>
+            <p><strong>Số điểm:</strong> <span id="playerScore">0</span></p>
+        </div>
+        <button onclick="logout()" class="logout-btn">Đăng Xuất</button>
+    </div>
+
+    <script>
+        // Giả sử bạn lấy thông tin người chơi từ API hoặc Session
+        document.getElementById('usernameDisplay').textContent = "Người Chơi";  // Tên người chơi
+        document.getElementById('playerName').textContent = "Người Chơi";  // Tên hiển thị trong game
+        document.getElementById('playerScore').textContent = "1500";  // Điểm số người chơi
+
+        // Hàm đăng xuất (thực tế sẽ xóa session hoặc cookie)
+        function logout() {
+            // Xoá session hoặc cookie
+            window.location.href = "login.html"; // Quay lại trang đăng nhập
+        }
+    </script>
+</body>
+</html>
